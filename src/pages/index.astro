@@ -1,0 +1,208 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  {/* Global Noise Overlay */}
+  <div class="fixed inset-0 w-full h-full opacity-[0.03] pointer-events-none z-0" style="background-image: url('https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967adf_ZTrl.gif'); background-size: 200px;"></div>
+
+  {/* Floating dates - Positioned outside the card */}
+  <div class="fixed top-3 left-3 md:top-8 md:left-8 z-50 text-white font-molika text-lg md:text-2xl opacity-70 pointer-events-none">20</div>
+  <div class="fixed top-3 right-3 md:top-8 md:right-8 z-50 text-white font-molika text-lg md:text-2xl opacity-70 pointer-events-none">26</div>
+  <div class="fixed bottom-3 left-3 md:bottom-8 md:left-8 z-50 text-white font-molika text-lg md:text-2xl opacity-70 pointer-events-none">07</div>
+  <div class="fixed bottom-3 right-3 md:bottom-8 md:right-8 z-50 text-white font-molika text-lg md:text-2xl opacity-70 pointer-events-none">20</div>
+
+  {/* Scrollable Blue Card */}
+  <section class="relative w-[calc(100%-1.5rem)] md:w-[calc(100%-6rem)] mx-auto mt-4 md:mt-8 h-[80vh] md:h-[85vh] rounded-3xl md:rounded-[2.5rem] bg-[#2D8CDB] z-10 shadow-2xl overflow-y-auto overflow-x-hidden scroll-smooth" id="blueCard">
+    
+    {/* Fixed Background Sky within card */}
+    <div class="sticky top-0 w-full h-[80vh] md:h-[85vh] z-0 pointer-events-none">
+      <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967af5_blue%20sky%20gb.jpg" alt="Blue Sky" class="w-full h-full object-cover object-bottom" />
+    </div>
+
+    {/* Parallax Clouds */}
+    <div class="sticky top-0 w-full h-[80vh] md:h-[85vh] z-0 pointer-events-none -mt-[80vh] md:-mt-[85vh] overflow-hidden">
+      {/* Pair 1 */}
+      <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aea_cloud%20web1.png" alt="Cloud" class="parallax-cloud-fast absolute top-[30%] -left-12 md:-left-24 w-[60%] max-w-[600px] h-auto object-contain transform translate-y-0 opacity-90 mix-blend-screen" />
+      <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aed_cloud%20web3.png" alt="Cloud" class="parallax-cloud-slow absolute top-[10%] -right-12 md:-right-24 w-[50%] max-w-[500px] h-auto object-contain transform translate-y-0 opacity-90 mix-blend-screen" />
+      
+      {/* Pair 2 */}
+      <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aed_cloud%20web3.png" alt="Cloud" class="parallax-cloud-slow absolute top-[120%] -left-16 md:-left-32 w-[55%] max-w-[550px] h-auto object-contain transform translate-y-0 opacity-80 mix-blend-screen" />
+      <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aea_cloud%20web1.png" alt="Cloud" class="parallax-cloud-fast absolute top-[90%] -right-8 md:-right-16 w-[65%] max-w-[650px] h-auto object-contain transform translate-y-0 opacity-85 mix-blend-screen" />
+
+      {/* Pair 3 */}
+      <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aea_cloud%20web1.png" alt="Cloud" class="parallax-cloud-fast absolute top-[210%] -left-10 md:-left-20 w-[60%] max-w-[600px] h-auto object-contain transform translate-y-0 opacity-90 mix-blend-screen" />
+      <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aed_cloud%20web3.png" alt="Cloud" class="parallax-cloud-slow absolute top-[190%] -right-16 md:-right-32 w-[50%] max-w-[500px] h-auto object-contain transform translate-y-0 opacity-90 mix-blend-screen" />
+    </div>
+    
+    {/* Content Container Inside Blue Card */}
+    <div class="relative z-10 flex flex-col items-center px-4 md:px-8 w-full -mt-[80vh] md:-mt-[85vh] pt-[15vh] md:pt-[25vh]">
+      
+      {/* Block 1 */}
+      <div class="flex flex-col items-center text-center max-w-4xl min-h-[65vh] md:min-h-[50vh]">
+        <h1 class="font-molika text-brand-yellow text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] mb-4 uppercase tracking-wider drop-shadow-md">
+          something<br/>to talk about
+        </h1>
+        <h2 class="font-tanker text-brand-dark text-lg md:text-3xl uppercase tracking-widest mt-2 mb-8">
+          Austin & Sherin
+        </h2>
+        <p class="font-tanker text-brand-dark text-base md:text-xl uppercase tracking-widest max-w-lg mt-auto font-bold opacity-90 drop-shadow-sm pb-12 leading-relaxed">
+          Well, it's been a fast and fulfilling 43 months journey of love. And we've reached a tipping point.
+        </p>
+      </div>
+
+      {/* Block 2 */}
+      <div class="flex flex-col items-center text-center min-h-[40vh] md:min-h-[50vh] justify-center">
+        <h2 class="font-molika text-brand-yellow text-5xl md:text-8xl lg:text-[7rem] leading-[0.9] uppercase tracking-wider drop-shadow-md">
+          WE MUST GET<br/>MARRIED
+        </h2>
+      </div>
+
+      {/* Block 3 */}
+      <div class="flex flex-col items-center text-center min-h-[40vh] md:min-h-[50vh] justify-center max-w-2xl px-2">
+        <p class="font-tanker text-brand-dark text-lg md:text-2xl uppercase tracking-widest leading-relaxed font-bold opacity-90 drop-shadow-sm">
+          IT ALL STARTED THOUSAND THREE THIRTY ONE DAYS AGO WHEN WE MET AT OUR OFFICE IN KOCHI. SINCE THEN A LOT HAS HAPPENED.
+        </p>
+      </div>
+
+      {/* Block 4 */}
+      <div class="flex flex-col items-center text-center mt-12 mb-16 md:mb-24">
+        <h2 class="font-molika text-brand-yellow text-5xl md:text-9xl lg:text-[8rem] uppercase tracking-wider drop-shadow-md">
+          LET'S RECAP...
+        </h2>
+      </div>
+
+      {/* Block 5 - Polaroids Stack */}
+      <div class="flex flex-col items-center gap-8 md:gap-32 w-full max-w-md my-16 md:my-24 pb-20 md:pb-32">
+        <div class="relative w-[220px] sm:w-[280px] md:w-[350px] transform -rotate-3 transition hover:scale-105 hover:rotate-0 duration-500 z-10 shadow-2xl">
+          <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967b01_5e93057f02e2153766bb73ce4508c198_Palaroid1.png" alt="Day 1" class="w-full h-auto" />
+        </div>
+        
+        <div class="relative w-[220px] sm:w-[280px] md:w-[350px] transform rotate-2 transition hover:scale-105 hover:-rotate-1 duration-500 z-10 shadow-2xl -mt-8 md:-mt-24">
+          <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967b08_c495cb828f61f258af1fc13128d42702_Palaroid2.png" alt="Day 30" class="w-full h-auto" />
+        </div>
+        
+        <div class="relative w-[220px] sm:w-[280px] md:w-[350px] transform -rotate-2 transition hover:scale-105 hover:rotate-1 duration-500 z-10 shadow-2xl -mt-8 md:-mt-24">
+          <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967b03_b0238ebd335345fb0ca88949c13993d0_Palaroid3.png" alt="Day 69" class="w-full h-auto" />
+        </div>
+
+        <div class="relative w-[220px] sm:w-[280px] md:w-[350px] transform rotate-3 transition hover:scale-105 hover:-rotate-2 duration-500 z-10 shadow-2xl -mt-8 md:-mt-24">
+          <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967b04_eec8411a97cc8ba0c6e3ba61b7e2a50e_Palaroid4.png" alt="More memories" class="w-full h-auto" />
+        </div>
+      </div>
+
+      {/* Block 6 */}
+      <div class="flex flex-col items-center text-center min-h-[30vh] md:min-h-[40vh] justify-center max-w-2xl px-2 pb-16 md:pb-20">
+        <p class="font-tanker text-brand-dark text-lg md:text-2xl uppercase tracking-widest leading-relaxed font-bold opacity-90 drop-shadow-sm">
+          SO, LET'S PROCESS OUR EMOTIONS AND CONTINUE...
+        </p>
+      </div>
+
+      {/* Block 7 */}
+      <div class="flex flex-col items-center text-center min-h-[50vh] md:min-h-[60vh] justify-center max-w-4xl px-2 pb-32 md:pb-48">
+        <h2 class="font-molika text-brand-yellow text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] leading-[0.9] uppercase tracking-wider drop-shadow-md">
+          YOU, MY FRIEND,<br/>ARE INVITED TO<br/>CELEBRATE OUR<br/>MARRIAGE ON THE<br/>DAY 1331
+        </h2>
+      </div>
+
+    </div>
+  </section>
+
+  {/* Dark Content Section */}
+  <section class="relative z-10 w-full pt-16 md:pt-24 pb-32 md:pb-48 flex flex-col items-center text-center px-4 mt-8">
+    <div class="relative z-10 max-w-2xl w-full flex flex-col items-center gap-24 md:gap-32">
+      
+      {/* Are You In Section */}
+      <div class="flex flex-col items-center gap-6 md:gap-8">
+        <h2 class="font-molika text-brand-yellow text-5xl md:text-7xl uppercase tracking-wider">Are you in ?</h2>
+        <p class="font-tanker text-white text-base md:text-xl uppercase tracking-widest leading-relaxed max-w-md px-4">
+          If yes, we're super happy!<br/>
+          and here are some details you're gonna need
+        </p>
+      </div>
+
+      {/* The Ceremony Section */}
+      <div class="flex flex-col items-center gap-6 md:gap-8">
+        <div class="font-tanker text-white text-lg md:text-xl uppercase tracking-widest opacity-80">
+          July 20th 2026
+        </div>
+        <h2 class="font-molika text-brand-yellow text-5xl sm:text-6xl md:text-8xl uppercase tracking-wider -mt-2 md:-mt-4">
+          The Ceremony
+        </h2>
+        
+        {/* Church Image Placeholder - Uses Webflow Polaroid */}
+        <div class="w-56 sm:w-64 md:w-80 h-auto rounded-3xl overflow-hidden my-6 transform transition hover:scale-105 duration-500">
+          <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967b0a_ae86ae0c0d006c425b45f0ebaf711140_Palaroid5.png" alt="Church" class="w-full h-full object-cover bg-white p-2 rounded-xl" />
+        </div>
+
+        <div class="flex flex-col items-center gap-4 px-2">
+          <p class="font-tanker text-white text-base md:text-xl uppercase tracking-widest">
+            So the wedding will take place at
+          </p>
+          <a href="https://austin-sherin.webflow.io/invite" target="_blank" class="font-tanker text-brand-blue text-lg sm:text-xl md:text-2xl uppercase tracking-widest underline decoration-2 underline-offset-8 hover:text-sky-400 transition-colors">
+            St Francis Xavier's Church, Vellarkad
+          </a>
+          <p class="font-tanker text-brand-yellow text-lg md:text-2xl uppercase tracking-widest underline decoration-2 underline-offset-8 mt-2">
+            AT 10:30AM
+          </p>
+          <p class="font-tanker text-white text-base md:text-xl uppercase tracking-widest max-w-md mt-6 leading-relaxed">
+            Please make sure to arrive on time to witness our special moment as we tie the knot ...and to join us for the celebration
+          </p>
+        </div>
+      </div>
+
+      {/* Lunch Section */}
+      <div class="flex flex-col items-center gap-6 md:gap-8">
+        <h2 class="font-molika text-brand-yellow text-5xl sm:text-6xl md:text-8xl uppercase tracking-wider">
+          LUNCH
+        </h2>
+        <div class="flex flex-col items-center gap-4 px-2">
+          <p class="font-tanker text-white text-base md:text-xl uppercase tracking-widest max-w-md leading-relaxed">
+            THIS is also the most important part 😉<br/>
+            Gather up at the wedding Ceremony will<br/>
+            be followed by Lunch at
+          </p>
+          <a href="https://maps.app.goo.gl/K3TyxzpYCwUX7YQz5" target="_blank" class="font-tanker text-brand-blue text-lg sm:text-xl md:text-2xl uppercase tracking-widest underline decoration-2 underline-offset-8 hover:text-sky-400 transition-colors mt-2">
+            Gala @ Telcon , pannithadam
+          </a>
+          <p class="font-tanker text-white text-base md:text-xl uppercase tracking-widest max-w-md mt-6 leading-relaxed">
+            to celebrate the love!<br/>
+            Prepare good vibes and good food !
+          </p>
+        </div>
+      </div>
+
+      {/* Footer Section */}
+      <div class="flex flex-col items-center gap-4 mt-8 md:mt-16">
+        <h2 class="font-molika text-brand-yellow text-4xl sm:text-5xl md:text-7xl uppercase tracking-wider text-center leading-[0.9]">
+          see you on<br/>JulY 20th!
+        </h2>
+        <p class="font-tanker text-white text-lg md:text-xl uppercase tracking-widest mt-4 md:mt-6">
+          SHerin & Austin
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Parallax clouds effect inside the scrollable blue card
+  const blueCard = document.getElementById('blueCard');
+  const cloudsFast = document.querySelectorAll('.parallax-cloud-fast');
+  const cloudsSlow = document.querySelectorAll('.parallax-cloud-slow');
+  
+  if (blueCard) {
+    blueCard.addEventListener('scroll', () => {
+      const scrollY = blueCard.scrollTop;
+      
+      // Move clouds at different speeds for depth
+      cloudsFast.forEach(cloud => {
+        cloud.style.transform = `translateY(${scrollY * -0.4}px)`;
+      });
+      
+      cloudsSlow.forEach(cloud => {
+        cloud.style.transform = `translateY(${scrollY * -0.2}px)`;
+      });
+    });
+  }
+</script>

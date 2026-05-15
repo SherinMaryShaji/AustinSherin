@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Molika';
+  src: url("https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967b12_MOLIKA.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tanker';
+  src: url("https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967add_Tanker-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@theme {
+  --font-molika: 'Molika', serif;
+  --font-tanker: 'Tanker', sans-serif;
+  --color-brand-yellow: #f1cf44;
+  --color-brand-blue: #0ea5e9;
+  --color-brand-dark: #1b1b1b;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-brand-dark);
+  font-family: var(--font-tanker);
+  color: white;
+}
