@@ -1,172 +1,463 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
   {/* Global Noise Overlay */}
-  <div class="fixed inset-0 w-full h-full opacity-[0.03] pointer-events-none z-0" style="background-image: url('https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967adf_ZTrl.gif'); background-size: 200px;"></div>
+  <div
+    class="fixed inset-0 w-full h-full opacity-[0.03] pointer-events-none z-0"
+    style="background-image: url('https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967adf_ZTrl.gif'); background-size: 200px;"
+  >
+  </div>
 
   {/* Floating dates - Positioned outside the card */}
-  <div class="fixed top-3 left-3 md:top-8 md:left-8 z-50 text-white font-molika text-lg md:text-2xl opacity-70 pointer-events-none">20</div>
-  <div class="fixed top-3 right-3 md:top-8 md:right-8 z-50 text-white font-molika text-lg md:text-2xl opacity-70 pointer-events-none">26</div>
-  <div class="fixed bottom-3 left-3 md:bottom-8 md:left-8 z-50 text-white font-molika text-lg md:text-2xl opacity-70 pointer-events-none">07</div>
-  <div class="fixed bottom-3 right-3 md:bottom-8 md:right-8 z-50 text-white font-molika text-lg md:text-2xl opacity-70 pointer-events-none">20</div>
+  <div
+    class="fixed top-3 left-3 md:top-8 md:left-8 z-50 text-white font-molika text-lg md:text-3xl font-bold opacity-70 pointer-events-none"
+  >
+    20
+  </div>
+  <div
+    class="fixed top-3 right-3 md:top-8 md:right-8 z-50 text-white font-molika text-lg md:text-3xl font-bold opacity-70 pointer-events-none"
+  >
+    26
+  </div>
+  <div
+    class="fixed bottom-3 left-3 md:bottom-8 md:left-8 z-50 text-white font-molika text-lg md:text-3xl font-bold opacity-70 pointer-events-none"
+  >
+    07
+  </div>
+  <div
+    class="fixed bottom-3 right-3 md:bottom-8 md:right-8 z-50 text-white font-molika text-lg md:text-3xl font-bold opacity-70 pointer-events-none"
+  >
+    20
+  </div>
 
-  {/* Scrollable Blue Card */}
-  <section class="relative w-[calc(100%-1.5rem)] md:w-[calc(100%-6rem)] mx-auto mt-4 md:mt-8 h-[80vh] md:h-[85vh] rounded-3xl md:rounded-[2.5rem] bg-[#2D8CDB] z-10 shadow-2xl overflow-y-auto overflow-x-hidden scroll-smooth" id="blueCard">
-    
-    {/* Fixed Background Sky within card */}
-    <div class="sticky top-0 w-full h-[80vh] md:h-[85vh] z-0 pointer-events-none">
-      <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967af5_blue%20sky%20gb.jpg" alt="Blue Sky" class="w-full h-full object-cover object-bottom" />
-    </div>
-
-    {/* Parallax Clouds */}
-    <div class="sticky top-0 w-full h-[80vh] md:h-[85vh] z-0 pointer-events-none -mt-[80vh] md:-mt-[85vh] overflow-hidden">
-      {/* Pair 1 */}
-      <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aea_cloud%20web1.png" alt="Cloud" class="parallax-cloud-fast absolute top-[30%] -left-12 md:-left-24 w-[60%] max-w-[600px] h-auto object-contain transform translate-y-0 opacity-90 mix-blend-screen" />
-      <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aed_cloud%20web3.png" alt="Cloud" class="parallax-cloud-slow absolute top-[10%] -right-12 md:-right-24 w-[50%] max-w-[500px] h-auto object-contain transform translate-y-0 opacity-90 mix-blend-screen" />
-      
-      {/* Pair 2 */}
-      <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aed_cloud%20web3.png" alt="Cloud" class="parallax-cloud-slow absolute top-[120%] -left-16 md:-left-32 w-[55%] max-w-[550px] h-auto object-contain transform translate-y-0 opacity-80 mix-blend-screen" />
-      <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aea_cloud%20web1.png" alt="Cloud" class="parallax-cloud-fast absolute top-[90%] -right-8 md:-right-16 w-[65%] max-w-[650px] h-auto object-contain transform translate-y-0 opacity-85 mix-blend-screen" />
-
-      {/* Pair 3 */}
-      <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aea_cloud%20web1.png" alt="Cloud" class="parallax-cloud-fast absolute top-[210%] -left-10 md:-left-20 w-[60%] max-w-[600px] h-auto object-contain transform translate-y-0 opacity-90 mix-blend-screen" />
-      <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aed_cloud%20web3.png" alt="Cloud" class="parallax-cloud-slow absolute top-[190%] -right-16 md:-right-32 w-[50%] max-w-[500px] h-auto object-contain transform translate-y-0 opacity-90 mix-blend-screen" />
-    </div>
-    
-    {/* Content Container Inside Blue Card */}
-    <div class="relative z-10 flex flex-col items-center px-4 md:px-8 w-full -mt-[80vh] md:-mt-[85vh] pt-[15vh] md:pt-[25vh]">
-      
-      {/* Block 1 */}
-      <div class="flex flex-col items-center text-center max-w-4xl min-h-[65vh] md:min-h-[50vh]">
-        <h1 class="font-molika text-brand-yellow text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] mb-4 uppercase tracking-wider drop-shadow-md">
-          something<br/>to talk about
-        </h1>
-        <h2 class="font-tanker text-brand-dark text-lg md:text-3xl uppercase tracking-widest mt-2 mb-8">
-          Austin & Sherin
-        </h2>
-        <p class="font-tanker text-brand-dark text-base md:text-xl uppercase tracking-widest max-w-lg mt-auto font-bold opacity-90 drop-shadow-sm pb-12 leading-relaxed">
-          Well, it's been a fast and fulfilling 43 months journey of love. And we've reached a tipping point.
-        </p>
+  {/* Pin Container for Sticky Scroll */}
+  <div class="relative h-[450vh] mt-4 md:mt-8 mb-12 md:mb-16" id="pinContainer">
+    {/* Pinned Blue Card */}
+    <section
+      class="sticky top-4 md:top-8 w-[calc(100%-1.5rem)] md:w-[calc(100%-8rem)] mx-auto h-[80vh] md:h-[85vh] rounded-3xl md:rounded-[2.5rem] bg-[#2D8CDB] z-10 shadow-2xl overflow-hidden"
+      id="blueCard"
+    >
+      {/* Fixed Background Sky within card */}
+      <div
+        class="sticky top-0 w-full h-[80vh] md:h-[85vh] z-0 pointer-events-none"
+      >
+        <img
+          src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967af5_blue%20sky%20gb.jpg"
+          alt="Blue Sky"
+          class="w-full h-full object-cover object-bottom"
+        />
       </div>
 
-      {/* Block 2 */}
-      <div class="flex flex-col items-center text-center min-h-[40vh] md:min-h-[50vh] justify-center">
-        <h2 class="font-molika text-brand-yellow text-5xl md:text-8xl lg:text-[7rem] leading-[0.9] uppercase tracking-wider drop-shadow-md">
-          WE MUST GET<br/>MARRIED
-        </h2>
+      {/* Parallax Clouds */}
+      <div
+        class="sticky top-0 w-full h-[80vh] md:h-[85vh] z-0 pointer-events-none -mt-[80vh] md:-mt-[85vh] overflow-hidden"
+      >
+        {/* Pair 1 */}
+        <img
+          src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aea_cloud%20web1.png"
+          alt="Cloud"
+          class="parallax-cloud-fast absolute top-[30%] -left-12 md:-left-24 w-[60%] max-w-[600px] h-auto object-contain transform translate-y-0 opacity-90 mix-blend-screen"
+        />
+        <img
+          src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aed_cloud%20web3.png"
+          alt="Cloud"
+          class="parallax-cloud-slow absolute top-[10%] -right-12 md:-right-24 w-[50%] max-w-[500px] h-auto object-contain transform translate-y-0 opacity-90 mix-blend-screen"
+        />
+
+        {/* Pair 2 */}
+        <img
+          src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aed_cloud%20web3.png"
+          alt="Cloud"
+          class="parallax-cloud-slow absolute top-[120%] -left-16 md:-left-32 w-[55%] max-w-[550px] h-auto object-contain transform translate-y-0 opacity-80 mix-blend-screen"
+        />
+        <img
+          src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aea_cloud%20web1.png"
+          alt="Cloud"
+          class="parallax-cloud-fast absolute top-[90%] -right-8 md:-right-16 w-[65%] max-w-[650px] h-auto object-contain transform translate-y-0 opacity-85 mix-blend-screen"
+        />
+
+        {/* Pair 3 */}
+        <img
+          src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aea_cloud%20web1.png"
+          alt="Cloud"
+          class="parallax-cloud-fast absolute top-[210%] -left-10 md:-left-20 w-[60%] max-w-[600px] h-auto object-contain transform translate-y-0 opacity-90 mix-blend-screen"
+        />
+        <img
+          src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967aed_cloud%20web3.png"
+          alt="Cloud"
+          class="parallax-cloud-slow absolute top-[190%] -right-16 md:-right-32 w-[50%] max-w-[500px] h-auto object-contain transform translate-y-0 opacity-90 mix-blend-screen"
+        />
       </div>
 
-      {/* Block 3 */}
-      <div class="flex flex-col items-center text-center min-h-[40vh] md:min-h-[50vh] justify-center max-w-2xl px-2">
-        <p class="font-tanker text-brand-dark text-lg md:text-2xl uppercase tracking-widest leading-relaxed font-bold opacity-90 drop-shadow-sm">
-          IT ALL STARTED THOUSAND THREE THIRTY ONE DAYS AGO WHEN WE MET AT OUR OFFICE IN KOCHI. SINCE THEN A LOT HAS HAPPENED.
-        </p>
-      </div>
-
-      {/* Block 4 */}
-      <div class="flex flex-col items-center text-center mt-12 mb-16 md:mb-24">
-        <h2 class="font-molika text-brand-yellow text-5xl md:text-9xl lg:text-[8rem] uppercase tracking-wider drop-shadow-md">
-          LET'S RECAP...
-        </h2>
-      </div>
-
-      {/* Block 5 - Polaroids Stack */}
-      <div class="flex flex-col items-center gap-8 md:gap-32 w-full max-w-md my-16 md:my-24 pb-20 md:pb-32">
-        <div class="relative w-[220px] sm:w-[280px] md:w-[350px] transform -rotate-3 transition hover:scale-105 hover:rotate-0 duration-500 z-10 shadow-2xl">
-          <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967b01_5e93057f02e2153766bb73ce4508c198_Palaroid1.png" alt="Day 1" class="w-full h-auto" />
+      {/* Content Container Inside Blue Card */}
+      <div
+        class="relative z-10 flex flex-col items-center px-4 md:px-8 w-full -mt-[80vh] md:-mt-[85vh] pt-[15vh] md:pt-[25vh]"
+        id="contentContainer"
+      >
+        {/* Block 1 */}
+        <div
+          class="flex flex-col items-center text-center max-w-4xl min-h-[65vh] md:min-h-[50vh]"
+        >
+          <h1
+            class="parallax-content font-tanker text-brand-yellow text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] mb-4 uppercase tracking-wider drop-shadow-md"
+            data-parallax-speed="0.08"
+            data-mouse-speed="12"
+          >
+            <span class="font-molika">s</span>omething to t<span
+              class="font-molika">a</span
+            >lk ab<span class="font-molika">o</span>ut
+          </h1>
+          <h2
+            class="parallax-content font-tanker text-brand-dark text-lg md:text-3xl uppercase tracking-widest mt-2 mb-8"
+            data-parallax-speed="0.04"
+            data-mouse-speed="8"
+          >
+            Austin & Sherin
+          </h2>
         </div>
-        
-        <div class="relative w-[220px] sm:w-[280px] md:w-[350px] transform rotate-2 transition hover:scale-105 hover:-rotate-1 duration-500 z-10 shadow-2xl -mt-8 md:-mt-24">
-          <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967b08_c495cb828f61f258af1fc13128d42702_Palaroid2.png" alt="Day 30" class="w-full h-auto" />
-        </div>
-        
-        <div class="relative w-[220px] sm:w-[280px] md:w-[350px] transform -rotate-2 transition hover:scale-105 hover:rotate-1 duration-500 z-10 shadow-2xl -mt-8 md:-mt-24">
-          <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967b03_b0238ebd335345fb0ca88949c13993d0_Palaroid3.png" alt="Day 69" class="w-full h-auto" />
+
+        {/* Block 2 */}
+        <div
+          class="flex flex-col items-center text-center max-w-2xl min-h-[70vh] justify-center mb-16 px-4"
+        >
+          <p
+            class="parallax-content font-tanker text-brand-dark text-base md:text-2xl uppercase tracking-widest max-w-lg font-bold opacity-90 drop-shadow-sm pb-6 leading-relaxed"
+            data-parallax-speed="0.03"
+            data-mouse-speed="8"
+          >
+            Well, it's been a fast and fulfilling 43 months journey of love. And
+            we've reached a tipping point.
+          </p>
+          <h2
+            class="parallax-content font-tanker text-brand-yellow text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] leading-[0.9] uppercase tracking-wider drop-shadow-md"
+            data-parallax-speed="0.03"
+            data-mouse-speed="14"
+          >
+            WE MUST GET MARRIED
+          </h2>
         </div>
 
-        <div class="relative w-[220px] sm:w-[280px] md:w-[350px] transform rotate-3 transition hover:scale-105 hover:-rotate-2 duration-500 z-10 shadow-2xl -mt-8 md:-mt-24">
-          <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967b04_eec8411a97cc8ba0c6e3ba61b7e2a50e_Palaroid4.png" alt="More memories" class="w-full h-auto" />
+        {/* Block 3 */}
+
+        <div
+          class="flex flex-col items-center text-center max-w-2xl min-h-[70vh] justify-center mb-16 px-4"
+        >
+          <p
+            class="parallax-content font-tanker text-brand-dark text-base md:text-2xl uppercase tracking-widest max-w-lg font-bold opacity-90 drop-shadow-sm pb-6 leading-relaxed"
+            data-parallax-speed="0.03"
+            data-mouse-speed="8"
+          >
+            IT ALL STARTED THOUSAND THREE THIRTY ONE DAYS AGO WHEN WE MET AT OUR
+            OFFICE IN KOCHI. SINCE THEN A LOT HAS HAPPENED.
+          </p>
+          <h2
+            class="parallax-content font-tanker text-brand-yellow text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] leading-[0.9] uppercase tracking-wider drop-shadow-md"
+            data-parallax-speed="0.03"
+            data-mouse-speed="14"
+          >
+            LET'<span class="font-molika">S R</span>ECAP...
+          </h2>
+        </div>
+
+        <!-- <div
+          class="flex flex-col items-center text-center min-h-[40vh] md:min-h-[50vh] justify-center max-w-2xl px-2 mt-6 md:mt-12"
+        >
+          <p
+            class="parallax-content font-tanker text-brand-dark text-lg md:text-2xl uppercase tracking-widest leading-relaxed font-bold opacity-90 drop-shadow-sm"
+            data-parallax-speed="-0.06"
+            data-mouse-speed="-12"
+          >
+            IT ALL STARTED THOUSAND THREE THIRTY ONE DAYS AGO WHEN WE MET AT OUR
+            OFFICE IN KOCHI. SINCE THEN A LOT HAS HAPPENED.
+          </p>
+        </div> -->
+
+        {/* Block 4 */}
+        <!-- <div
+          class="flex flex-col items-center text-center mt-12 mb-16 md:mb-24"
+        >
+          <h2
+            class="parallax-content font-molika text-brand-yellow text-5xl md:text-9xl lg:text-[8rem] uppercase tracking-wider drop-shadow-md"
+            data-parallax-speed="0.1"
+            data-mouse-speed="14"
+          >
+            LET'S RECAP...
+          </h2>
+        </div> -->
+
+        {
+          /* Block 5 - Polaroids Stack Layout Fixed with Reduced Gap & Natural Overlaps */
+        }
+        <div
+          id="polaroidsContainer"
+          class="relative w-full max-w-lg flex flex-col items-center gap-6 sm:gap-10 mb-16 md:mb-24"
+        >
+          <!-- Day 1 -->
+          <div
+            class="parallax-content parallax-polaroid relative w-[240px] sm:w-[280px] md:w-[340px] shadow-2xl"
+            style="z-index: 19;"
+            data-mouse-speed="10"
+            data-base-rotate="-3"
+            data-base-tx="-12"
+          >
+            <img
+              src="/polaroids/1.png"
+              alt="Day 1"
+              class="w-full h-auto bg-white p-3 pb-8 rounded-sm"
+            />
+          </div>
+
+          <!-- Day 30 -->
+          <div
+            class="parallax-content parallax-polaroid relative w-[240px] sm:w-[280px] md:w-[340px] shadow-2xl -mt-8 sm:-mt-12"
+            style="z-index: 18;"
+            data-mouse-speed="13"
+            data-base-rotate="4"
+            data-base-tx="16"
+          >
+            <img
+              src="/polaroids/30.png"
+              alt="Day 30"
+              class="w-full h-auto bg-white p-3 pb-8 rounded-sm"
+            />
+          </div>
+
+          <!-- Day 69 -->
+          <div
+            class="parallax-content parallax-polaroid relative w-[240px] sm:w-[280px] md:w-[340px] shadow-2xl -mt-8 sm:-mt-12"
+            style="z-index: 17;"
+            data-mouse-speed="11"
+            data-base-rotate="-5"
+            data-base-tx="-18"
+          >
+            <img
+              src="/polaroids/69.png"
+              alt="Day 69"
+              class="w-full h-auto bg-white p-3 pb-8 rounded-sm"
+            />
+          </div>
+
+          <!-- Day 468 -->
+          <div
+            class="parallax-content parallax-polaroid relative w-[240px] sm:w-[280px] md:w-[340px] shadow-2xl -mt-8 sm:-mt-12"
+            style="z-index: 16;"
+            data-mouse-speed="15"
+            data-base-rotate="3"
+            data-base-tx="10"
+          >
+            <img
+              src="/polaroids/468.png"
+              alt="Day 468"
+              class="w-full h-auto bg-white p-3 pb-8 rounded-sm"
+            />
+          </div>
+
+          <!-- Day 496 -->
+          <div
+            class="parallax-content parallax-polaroid relative w-[240px] sm:w-[280px] md:w-[340px] shadow-2xl -mt-8 sm:-mt-12"
+            style="z-index: 15;"
+            data-mouse-speed="12"
+            data-base-rotate="-2"
+            data-base-tx="-8"
+          >
+            <img
+              src="/polaroids/496.png"
+              alt="Day 496"
+              class="w-full h-auto bg-white p-3 pb-8 rounded-sm"
+            />
+          </div>
+
+          <!-- Day 558 -->
+          <div
+            class="parallax-content parallax-polaroid relative w-[240px] sm:w-[280px] md:w-[340px] shadow-2xl -mt-8 sm:-mt-12"
+            style="z-index: 14;"
+            data-mouse-speed="14"
+            data-base-rotate="5"
+            data-base-tx="20"
+          >
+            <img
+              src="/polaroids/558.png"
+              alt="Day 558"
+              class="w-full h-auto bg-white p-3 pb-8 rounded-sm"
+            />
+          </div>
+
+          <!-- Day 795 -->
+          <div
+            class="parallax-content parallax-polaroid relative w-[240px] sm:w-[280px] md:w-[340px] shadow-2xl -mt-8 sm:-mt-12"
+            style="z-index: 13;"
+            data-mouse-speed="10"
+            data-base-rotate="-4"
+            data-base-tx="-14"
+          >
+            <img
+              src="/polaroids/795.png"
+              alt="Day 795"
+              class="w-full h-auto bg-white p-3 pb-8 rounded-sm"
+            />
+          </div>
+
+          <!-- Day 800 -->
+          <div
+            class="parallax-content parallax-polaroid relative w-[240px] sm:w-[280px] md:w-[340px] shadow-2xl -mt-8 sm:-mt-12"
+            style="z-index: 12;"
+            data-mouse-speed="16"
+            data-base-rotate="2"
+            data-base-tx="12"
+          >
+            <img
+              src="/polaroids/800.png"
+              alt="Day 800"
+              class="w-full h-auto bg-white p-3 pb-8 rounded-sm"
+            />
+          </div>
+
+          <!-- Day 1102 -->
+          <div
+            class="parallax-content parallax-polaroid relative w-[240px] sm:w-[280px] md:w-[340px] shadow-2xl -mt-8 sm:-mt-12"
+            style="z-index: 11;"
+            data-mouse-speed="12"
+            data-base-rotate="-3"
+            data-base-tx="-10"
+          >
+            <img
+              src="/polaroids/1102.png"
+              alt="Day 1102"
+              class="w-full h-auto bg-white p-3 pb-8 rounded-sm"
+            />
+          </div>
+        </div>
+
+        {/* Block 6 */}
+
+        <div
+          class="flex flex-col items-center text-center max-w-2xl min-h-[70vh] justify-center mb-16 px-4"
+        >
+          <p
+            class="parallax-content font-tanker text-brand-dark text-base md:text-2xl uppercase tracking-widest max-w-lg font-bold opacity-90 drop-shadow-sm pb-6 leading-relaxed"
+            data-parallax-speed="0.03"
+            data-mouse-speed="8"
+          >
+            SO, LET'S PROCESS OUR EMOTIONS AND CONTINUE...
+          </p>
+          <h2
+            class="parallax-content font-tanker text-brand-yellow text-5xl sm:text-7xl md:text-8xl lg:text-[4rem] leading-[0.9] uppercase tracking-wider drop-shadow-md pb-40 md:pb-64"
+            data-parallax-speed="0.03"
+            data-mouse-speed="14"
+          >
+            YOU, MY FRIEND, ARE INVITED TO CELEBRATE OUR MARRIAGE ON THE DAY
+            1331
+          </h2>
         </div>
       </div>
-
-      {/* Block 6 */}
-      <div class="flex flex-col items-center text-center min-h-[30vh] md:min-h-[40vh] justify-center max-w-2xl px-2 pb-16 md:pb-20">
-        <p class="font-tanker text-brand-dark text-lg md:text-2xl uppercase tracking-widest leading-relaxed font-bold opacity-90 drop-shadow-sm">
-          SO, LET'S PROCESS OUR EMOTIONS AND CONTINUE...
-        </p>
-      </div>
-
-      {/* Block 7 */}
-      <div class="flex flex-col items-center text-center min-h-[50vh] md:min-h-[60vh] justify-center max-w-4xl px-2 pb-32 md:pb-48">
-        <h2 class="font-molika text-brand-yellow text-4xl sm:text-5xl md:text-7xl lg:text-[6rem] leading-[0.9] uppercase tracking-wider drop-shadow-md">
-          YOU, MY FRIEND,<br/>ARE INVITED TO<br/>CELEBRATE OUR<br/>MARRIAGE ON THE<br/>DAY 1331
-        </h2>
-      </div>
-
-    </div>
-  </section>
+    </section>
+  </div>
 
   {/* Dark Content Section */}
-  <section class="relative z-10 w-full pt-16 md:pt-24 pb-32 md:pb-48 flex flex-col items-center text-center px-4 mt-8">
-    <div class="relative z-10 max-w-2xl w-full flex flex-col items-center gap-24 md:gap-32">
-      
+  <section
+    id="darkSection"
+    class="relative z-10 w-full pt-16 md:pt-24 pb-32 md:pb-48 flex flex-col items-center text-center px-4 mt-8"
+  >
+    <div
+      class="relative z-10 max-w-2xl w-full flex flex-col items-center gap-24 md:gap-32"
+    >
       {/* Are You In Section */}
       <div class="flex flex-col items-center gap-6 md:gap-8">
-        <h2 class="font-molika text-brand-yellow text-5xl md:text-7xl uppercase tracking-wider">Are you in ?</h2>
-        <p class="font-tanker text-white text-base md:text-xl uppercase tracking-widest leading-relaxed max-w-md px-4">
-          If yes, we're super happy!<br/>
+        <h2
+          class="font-tanker text-brand-yellow text-5xl md:text-8xl uppercase tracking-wider"
+        >
+          <span class="font-molika">A</span>re y<span class="font-molika"
+            >o</span
+          >u in ?
+        </h2>
+        <p
+          class="font-tanker text-white text-base md:text-2xl uppercase tracking-widest leading-relaxed max-w-md px-4"
+        >
+          If yes, we're super happy!<br />
           and here are some details you're gonna need
         </p>
       </div>
 
       {/* The Ceremony Section */}
-      <div class="flex flex-col items-center gap-6 md:gap-8">
-        <div class="font-tanker text-white text-lg md:text-xl uppercase tracking-widest opacity-80">
+      <div class="flex flex-col items-center gap-6 md:gap-8 md:mt-20">
+        <div
+          class="font-tanker text-white text-lg md:text-3xl font-bold uppercase tracking-widest opacity-80"
+        >
           July 20th 2026
         </div>
-        <h2 class="font-molika text-brand-yellow text-5xl sm:text-6xl md:text-8xl uppercase tracking-wider -mt-2 md:-mt-4">
-          The Ceremony
+        <h2
+          class="font-tanker text-brand-yellow text-5xl sm:text-6xl md:text-8xl uppercase tracking-wider -mt-2 md:-mt-4"
+        >
+          T<span class="font-molika">h</span>e <span class="font-molika">C</span
+          >ere<span class="font-molika">m</span>ony
         </h2>
-        
+
         {/* Church Image Placeholder - Uses Webflow Polaroid */}
-        <div class="w-56 sm:w-64 md:w-80 h-auto rounded-3xl overflow-hidden my-6 transform transition hover:scale-105 duration-500">
-          <img src="https://cdn.prod.website-files.com/6a04a1cfb75e6726e196798d/6a04a1d6b75e6726e1967b0a_ae86ae0c0d006c425b45f0ebaf711140_Palaroid5.png" alt="Church" class="w-full h-full object-cover bg-white p-2 rounded-xl" />
+        <div
+          class="w-56 sm:w-64 md:w-88 h-auto rounded-3xl overflow-hidden my-6 transform transition hover:scale-105 duration-500"
+        >
+          <img
+            src="/polaroids/church.png"
+            alt="Church"
+            class="w-full h-full object-cover p-2 rounded-2xl"
+          />
         </div>
 
         <div class="flex flex-col items-center gap-4 px-2">
-          <p class="font-tanker text-white text-base md:text-xl uppercase tracking-widest">
+          <p
+            class="font-tanker text-white text-base md:text-2xl uppercase tracking-widest"
+          >
             So the wedding will take place at
           </p>
-          <a href="https://austin-sherin.webflow.io/invite" target="_blank" class="font-tanker text-brand-blue text-lg sm:text-xl md:text-2xl uppercase tracking-widest underline decoration-2 underline-offset-8 hover:text-sky-400 transition-colors">
+          <a
+            href="https://maps.app.goo.gl/YfbLJVJnXjX9Q8Hx7"
+            target="_blank"
+            class="font-tanker text-brand-blue text-lg sm:text-xl md:text-3xl uppercase tracking-widest underline decoration-2 underline-offset-8 hover:text-sky-400 transition-colors"
+          >
             St Francis Xavier's Church, Vellarkad
           </a>
-          <p class="font-tanker text-brand-yellow text-lg md:text-2xl uppercase tracking-widest underline decoration-2 underline-offset-8 mt-2">
+          <p
+            class="font-tanker text-brand-yellow text-lg md:text-2xl uppercase tracking-widest underline decoration-2 underline-offset-8 mt-2"
+          >
             AT 10:30AM
           </p>
-          <p class="font-tanker text-white text-base md:text-xl uppercase tracking-widest max-w-md mt-6 leading-relaxed">
-            Please make sure to arrive on time to witness our special moment as we tie the knot ...and to join us for the celebration
+          <p
+            class="font-tanker text-white text-base md:text-xl uppercase tracking-widest max-w-md mt-6 leading-relaxed"
+          >
+            Please make sure to arrive on time to witness our special moment as
+            we tie the knot ...and to join us for the celebration
           </p>
         </div>
       </div>
 
       {/* Lunch Section */}
       <div class="flex flex-col items-center gap-6 md:gap-8">
-        <h2 class="font-molika text-brand-yellow text-5xl sm:text-6xl md:text-8xl uppercase tracking-wider">
-          LUNCH
+        <h2
+          class="font-tanker text-brand-yellow text-5xl sm:text-6xl md:text-8xl uppercase tracking-wider"
+        >
+          L<span class="font-molika">U</span>NCH
         </h2>
         <div class="flex flex-col items-center gap-4 px-2">
-          <p class="font-tanker text-white text-base md:text-xl uppercase tracking-widest max-w-md leading-relaxed">
-            THIS is also the most important part 😉<br/>
-            Gather up at the wedding Ceremony will<br/>
+          <p
+            class="font-tanker text-white text-base md:text-2xl uppercase tracking-widest max-w-md leading-relaxed"
+          >
+            THIS is also the most important part 😉<br />
+            Gather up at the wedding Ceremony will<br />
             be followed by Lunch at
           </p>
-          <a href="https://maps.app.goo.gl/K3TyxzpYCwUX7YQz5" target="_blank" class="font-tanker text-brand-blue text-lg sm:text-xl md:text-2xl uppercase tracking-widest underline decoration-2 underline-offset-8 hover:text-sky-400 transition-colors mt-2">
+          <a
+            href="https://maps.app.goo.gl/K3TyxzpYCwUX7YQz5"
+            target="_blank"
+            class="font-tanker text-brand-blue text-lg sm:text-xl md:text-4xl uppercase tracking-widest underline decoration-2 underline-offset-8 hover:text-sky-400 transition-colors mt-2"
+          >
             Gala @ Telcon , pannithadam
           </a>
-          <p class="font-tanker text-white text-base md:text-xl uppercase tracking-widest max-w-md mt-6 leading-relaxed">
-            to celebrate the love!<br/>
+          <p
+            class="font-tanker text-white text-base md:text-2xl uppercase tracking-widest max-w-md mt-6 leading-relaxed"
+          >
+            to celebrate the love!<br />
             Prepare good vibes and good food !
           </p>
         </div>
@@ -174,35 +465,265 @@ import Layout from '../layouts/Layout.astro';
 
       {/* Footer Section */}
       <div class="flex flex-col items-center gap-4 mt-8 md:mt-16">
-        <h2 class="font-molika text-brand-yellow text-4xl sm:text-5xl md:text-7xl uppercase tracking-wider text-center leading-[0.9]">
-          see you on<br/>JulY 20th!
+        <h2
+          class="font-tanker text-brand-yellow text-4xl sm:text-5xl md:text-9xl uppercase tracking-wider text-center leading-[0.9]"
+        >
+          <span class="font-molika">s</span>ee you o<span class="font-molika"
+            >n</span
+          ><br />J<span class="font-molika">u</span>lY <span class="font-molika"
+            >2</span
+          >0<sup>t<span class="font-molika">h</span></sup>!
         </h2>
-        <p class="font-tanker text-white text-lg md:text-xl uppercase tracking-widest mt-4 md:mt-6">
+        <p
+          class="font-tanker text-white text-lg md:text-4xl uppercase tracking-widest mt-4 md:mt-6"
+        >
           SHerin & Austin
         </p>
       </div>
     </div>
   </section>
-</Layout>
 
-<script>
-  // Parallax clouds effect inside the scrollable blue card
-  const blueCard = document.getElementById('blueCard');
-  const cloudsFast = document.querySelectorAll('.parallax-cloud-fast');
-  const cloudsSlow = document.querySelectorAll('.parallax-cloud-slow');
-  
-  if (blueCard) {
-    blueCard.addEventListener('scroll', () => {
-      const scrollY = blueCard.scrollTop;
-      
-      // Move clouds at different speeds for depth
-      cloudsFast.forEach(cloud => {
-        cloud.style.transform = `translateY(${scrollY * -0.4}px)`;
+  <style>
+    .parallax-content {
+      will-change: transform;
+    }
+    .parallax-polaroid {
+      will-change: transform;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+      transition: box-shadow 0.3s ease;
+    }
+    #contentContainer {
+      will-change: transform;
+    }
+    #darkSection {
+      will-change: transform;
+    }
+  </style>
+
+  <script>
+    // Elements
+    const blueCard = document.getElementById("blueCard");
+    const pinContainer = document.getElementById("pinContainer");
+    const contentContainer = document.getElementById("contentContainer");
+    const darkSection = document.getElementById("darkSection");
+    const polaroidsContainer = document.getElementById("polaroidsContainer");
+    const cloudsFast = document.querySelectorAll(".parallax-cloud-fast");
+    const cloudsSlow = document.querySelectorAll(".parallax-cloud-slow");
+    const parallaxElements = document.querySelectorAll(".parallax-content");
+
+    // Hover detection for polaroids
+    const polaroids = document.querySelectorAll(".parallax-polaroid");
+    polaroids.forEach((el) => {
+      el.addEventListener("mouseenter", () => {
+        el.setAttribute("data-hovered", "true");
       });
-      
-      cloudsSlow.forEach(cloud => {
-        cloud.style.transform = `translateY(${scrollY * -0.2}px)`;
+      el.addEventListener("mouseleave", () => {
+        el.removeAttribute("data-hovered");
       });
     });
-  }
-</script>
+
+    if (blueCard && pinContainer && contentContainer && polaroidsContainer) {
+      // Animation state variables
+      let currentScroll = 0;
+      let targetScroll = 0;
+
+      let mouseX = 0;
+      let mouseY = 0;
+      let targetMouseX = 0;
+      let targetMouseY = 0;
+
+      // Track mouse relative to blueCard
+      blueCard.addEventListener("mousemove", (e) => {
+        const rect = blueCard.getBoundingClientRect();
+        targetMouseX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+        targetMouseY = ((e.clientY - rect.top) / rect.height) * 2 - 1;
+
+        // Spawn stardust particles sometimes
+        if (Math.random() < 0.25) {
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          createStardust(x, y);
+        }
+      });
+
+      blueCard.addEventListener("mouseleave", () => {
+        targetMouseX = 0;
+        targetMouseY = 0;
+      });
+
+      // Particle System
+      const particles = [];
+
+      function createStardust(x, y) {
+        const particle = document.createElement("div");
+        particle.className =
+          "absolute pointer-events-none z-30 transition-opacity duration-300";
+
+        const isSparkle = Math.random() > 0.4;
+        const size = Math.random() * 14 + 6;
+
+        particle.style.width = `${size}px`;
+        particle.style.height = `${size}px`;
+        particle.style.left = `${x}px`;
+        particle.style.top = `${y}px`;
+        particle.style.transform = "translate(-50%, -50%)";
+
+        if (isSparkle) {
+          particle.innerHTML = `
+          <svg viewBox="0 0 24 24" fill="none" class="text-brand-yellow w-full h-full opacity-90">
+            <path d="M12 0L14.6 9.4L24 12L14.6 14.6L12 24L9.4 14.6L0 12L9.4 9.4L12 0Z" fill="currentColor"/>
+          </svg>
+        `;
+        } else {
+          particle.style.borderRadius = "50%";
+          particle.style.background =
+            "radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(241,207,68,0.4) 50%, rgba(241,207,68,0) 80%)";
+        }
+
+        blueCard.appendChild(particle);
+
+        particles.push({
+          element: particle,
+          x: x,
+          y: y,
+          vx: (Math.random() - 0.5) * 1.5,
+          vy: (Math.random() - 0.5) * 1.2 - 0.8,
+          alpha: 1.0,
+          scale: 1.0,
+          decay: 0.015 + Math.random() * 0.015,
+        });
+      }
+
+      function updateParticles() {
+        for (let i = particles.length - 1; i >= 0; i--) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+          p.alpha -= p.decay;
+          p.scale -= p.decay * 0.5;
+
+          if (p.alpha <= 0 || p.scale <= 0) {
+            p.element.remove();
+            particles.splice(i, 1);
+          } else {
+            p.element.style.left = `${p.x}px`;
+            p.element.style.top = `${p.y}px`;
+            p.element.style.opacity = p.alpha.toString();
+            p.element.style.transform = `translate(-50%, -50%) scale(${p.scale})`;
+          }
+        }
+      }
+
+      // Main animation loop
+      function animate() {
+        const pinTop = pinContainer.offsetTop;
+        const pinHeight = pinContainer.offsetHeight;
+        const cardHeight = blueCard.offsetHeight;
+        const contentHeight = contentContainer.offsetHeight;
+        const viewportHeight = window.innerHeight;
+
+        const stickyOffset = window.innerWidth >= 768 ? 32 : 16;
+        const startScroll = pinTop - stickyOffset;
+        const endScroll = pinTop + pinHeight - cardHeight - stickyOffset;
+
+        const maxScroll = Math.max(0, contentHeight - cardHeight);
+
+        let progress = 0;
+        if (endScroll - startScroll > 0) {
+          progress = (window.scrollY - startScroll) / (endScroll - startScroll);
+          progress = Math.max(0, Math.min(1, progress));
+        }
+
+        targetScroll = progress * maxScroll;
+
+        currentScroll += (targetScroll - currentScroll) * 0.08;
+        mouseX += (targetMouseX - mouseX) * 0.06;
+        mouseY += (targetMouseY - mouseY) * 0.06;
+
+        contentContainer.style.transform = `translateY(${-currentScroll}px)`;
+
+        if (darkSection) {
+          let darkTranslateY = 0;
+          if (window.scrollY > pinTop + pinHeight - viewportHeight) {
+            if (window.scrollY < endScroll) {
+              darkTranslateY =
+                window.scrollY + viewportHeight - (pinTop + pinHeight);
+            } else {
+              darkTranslateY =
+                endScroll + viewportHeight - (pinTop + pinHeight);
+            }
+          }
+          darkSection.style.transform = `translateY(${darkTranslateY}px)`;
+        }
+
+        cloudsFast.forEach((cloud) => {
+          cloud.style.transform = `translateY(${currentScroll * -0.4}px)`;
+        });
+        cloudsSlow.forEach((cloud) => {
+          cloud.style.transform = `translateY(${currentScroll * -0.2}px)`;
+        });
+
+        // Update parallax elements
+        parallaxElements.forEach((el) => {
+          const speed = parseFloat(
+            el.getAttribute("data-parallax-speed") || "0",
+          );
+          const mouseSpeed = parseFloat(
+            el.getAttribute("data-mouse-speed") || "15",
+          );
+
+          const scrollYOffset = currentScroll * speed;
+          const mouseXOffset = mouseX * mouseSpeed;
+          const mouseYOffset = mouseY * mouseSpeed;
+
+          if (el.classList.contains("parallax-polaroid")) {
+            const baseRotate = parseFloat(
+              el.getAttribute("data-base-rotate") || "0",
+            );
+            const baseTx = parseFloat(el.getAttribute("data-base-tx") || "0");
+
+            const isHovered = el.getAttribute("data-hovered") === "true";
+
+            // Hover transitions
+            const targetHoverScale = isHovered ? 1.05 : 1.0;
+            const targetHoverRotate = isHovered ? 0 : baseRotate;
+
+            let curHoverScale = parseFloat(
+              el.getAttribute("data-current-hover-scale") || "1.0",
+            );
+            let curHoverRotate = parseFloat(
+              el.getAttribute("data-current-hover-rotate") ||
+                baseRotate.toString(),
+            );
+
+            curHoverScale += (targetHoverScale - curHoverScale) * 0.12;
+            curHoverRotate += (targetHoverRotate - curHoverRotate) * 0.12;
+
+            el.setAttribute(
+              "data-current-hover-scale",
+              curHoverScale.toString(),
+            );
+            el.setAttribute(
+              "data-current-hover-rotate",
+              curHoverRotate.toString(),
+            );
+
+            // 3D Tilt parameters
+            const tiltX = mouseY * -5;
+            const tiltY = mouseX * 5;
+
+            // Combine vertical timeline offset + responsive tilt effects
+            el.style.transform = `translateX(${baseTx + mouseXOffset}px) translateY(${mouseYOffset}px) scale(${curHoverScale}) rotate(${curHoverRotate + mouseX * 1.5}deg) perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+          } else {
+            el.style.transform = `translateY(${scrollYOffset}px) translate(${mouseXOffset}px, ${mouseYOffset}px)`;
+          }
+        });
+
+        updateParticles();
+        requestAnimationFrame(animate);
+      }
+
+      animate();
+    }
+  </script>
+</Layout>
