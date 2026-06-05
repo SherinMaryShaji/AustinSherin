@@ -36,7 +36,7 @@ import Layout from "../layouts/Layout.astro";
   <div class="relative h-[450vh] mt-4 md:mt-8 mb-12 md:mb-16" id="pinContainer">
     {/* Pinned Blue Card */}
     <section
-      class="sticky top-4 md:top-8 w-[calc(100%-1.5rem)] md:w-[calc(100%-8rem)] mx-auto h-[80vh] md:h-[85vh] rounded-3xl md:rounded-[2.5rem] bg-[#2D8CDB] z-10 shadow-2xl overflow-hidden"
+      class="sticky top-14 md:top-14 w-[calc(100%-1.5rem)] md:w-[calc(100%-8rem)] mx-auto h-[80vh] md:h-[85vh] rounded-3xl md:rounded-[2.5rem] bg-[#2D8CDB] z-10 shadow-2xl overflow-hidden"
       id="blueCard"
     >
       {/* Fixed Background Sky within card */}
@@ -93,15 +93,22 @@ import Layout from "../layouts/Layout.astro";
 
       {/* Content Container Inside Blue Card */}
       <div
-        class="relative z-10 flex flex-col items-center px-4 md:px-8 w-full -mt-[80vh] md:-mt-[85vh] pt-[15vh] md:pt-[25vh]"
+        class="relative z-10 flex flex-col items-center px-4 md:px-8 w-full -mt-[80vh] md:-mt-[85vh] pt-[25vh] md:pt-[25vh]"
         id="contentContainer"
       >
         {/* Block 1 */}
         <div
-          class="flex flex-col items-center text-center max-w-4xl min-h-[65vh] md:min-h-[50vh]"
+          class="flex flex-col items-center text-center max-w-4xl min-h-[35vh] md:min-h-[50vh]"
         >
+          <h2
+            class="parallax-content font-tanker text-brand-dark text-xl md:text-3xl uppercase tracking-widest mt-2 mb-2 md:mb-8"
+            data-parallax-speed="0.04"
+            data-mouse-speed="8"
+          >
+            There is
+          </h2>
           <h1
-            class="parallax-content font-tanker text-brand-yellow text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] mb-4 uppercase tracking-wider drop-shadow-md"
+            class="parallax-content font-tanker text-brand-yellow text-5xl sm:text-7xl md:text-8xl lg:text-9xl leading-[0.9] mb-2 md:mb-4 uppercase tracking-wider drop-shadow-md"
             data-parallax-speed="0.08"
             data-mouse-speed="12"
           >
@@ -110,7 +117,7 @@ import Layout from "../layouts/Layout.astro";
             >lk ab<span class="font-molika">o</span>ut
           </h1>
           <h2
-            class="parallax-content font-tanker text-brand-dark text-lg md:text-3xl uppercase tracking-widest mt-2 mb-8"
+            class="parallax-content font-tanker text-brand-dark text-xl md:text-3xl uppercase tracking-widest mt-2 mb-8"
             data-parallax-speed="0.04"
             data-mouse-speed="8"
           >
@@ -120,10 +127,10 @@ import Layout from "../layouts/Layout.astro";
 
         {/* Block 2 */}
         <div
-          class="flex flex-col items-center text-center max-w-2xl min-h-[70vh] justify-center mb-16 px-4"
+          class="flex flex-col items-center text-center max-w-2xl min-h-[65vh] md:min-h-[70vh] justify-center mb-16 px-4"
         >
           <p
-            class="parallax-content font-tanker text-brand-dark text-base md:text-2xl uppercase tracking-widest max-w-lg font-bold opacity-90 drop-shadow-sm pb-6 leading-relaxed"
+            class="parallax-content font-tanker text-brand-dark text-xl md:text-2xl uppercase tracking-widest max-w-lg font-bold opacity-90 drop-shadow-sm pb-6 leading-relaxed"
             data-parallax-speed="0.03"
             data-mouse-speed="8"
           >
@@ -142,10 +149,10 @@ import Layout from "../layouts/Layout.astro";
         {/* Block 3 */}
 
         <div
-          class="flex flex-col items-center text-center max-w-2xl min-h-[70vh] justify-center mb-16 px-4"
+          class="flex flex-col items-center text-center max-w-2xl min-h-[35vh] md:min-h-[70vh] justify-center mb-16 px-4"
         >
           <p
-            class="parallax-content font-tanker text-brand-dark text-base md:text-2xl uppercase tracking-widest max-w-lg font-bold opacity-90 drop-shadow-sm pb-6 leading-relaxed"
+            class="parallax-content font-tanker text-brand-dark text-xl md:text-2xl uppercase tracking-widest max-w-lg font-bold opacity-90 drop-shadow-sm pb-6 leading-relaxed"
             data-parallax-speed="0.03"
             data-mouse-speed="8"
           >
@@ -336,7 +343,7 @@ import Layout from "../layouts/Layout.astro";
           class="flex flex-col items-center text-center max-w-2xl min-h-[70vh] justify-center mb-16 px-4"
         >
           <p
-            class="parallax-content font-tanker text-brand-dark text-base md:text-2xl uppercase tracking-widest max-w-lg font-bold opacity-90 drop-shadow-sm pb-6 leading-relaxed"
+            class="parallax-content font-tanker text-brand-dark text-xl md:text-2xl uppercase tracking-widest max-w-lg font-bold opacity-90 drop-shadow-sm pb-6 leading-relaxed"
             data-parallax-speed="0.03"
             data-mouse-speed="8"
           >
@@ -373,7 +380,7 @@ import Layout from "../layouts/Layout.astro";
           >u in ?
         </h2>
         <p
-          class="font-tanker text-white text-base md:text-2xl uppercase tracking-widest leading-relaxed max-w-md px-4"
+          class="font-tanker text-white text-xl md:text-2xl uppercase tracking-widest leading-relaxed max-w-md px-4"
         >
           If yes, we're super happy!<br />
           and here are some details you're gonna need
@@ -383,7 +390,7 @@ import Layout from "../layouts/Layout.astro";
       {/* The Ceremony Section */}
       <div class="flex flex-col items-center gap-6 md:gap-8 md:mt-20">
         <div
-          class="font-tanker text-white text-lg md:text-3xl font-bold uppercase tracking-widest opacity-80"
+          class="font-tanker text-white text-xl md:text-3xl font-bold uppercase tracking-widest opacity-80"
         >
           July 20th 2026
         </div>
@@ -407,24 +414,24 @@ import Layout from "../layouts/Layout.astro";
 
         <div class="flex flex-col items-center gap-4 px-2">
           <p
-            class="font-tanker text-white text-base md:text-2xl uppercase tracking-widest"
+            class="font-tanker text-white text-xl md:text-2xl uppercase tracking-widest"
           >
             So the wedding will take place at
           </p>
           <a
             href="https://maps.app.goo.gl/YfbLJVJnXjX9Q8Hx7"
             target="_blank"
-            class="font-tanker text-brand-blue text-lg sm:text-xl md:text-3xl uppercase tracking-widest underline decoration-2 underline-offset-8 hover:text-sky-400 transition-colors"
+            class="font-tanker text-brand-blue text-xl sm:text-xl md:text-3xl uppercase tracking-widest underline decoration-2 underline-offset-8 hover:text-sky-400 transition-colors"
           >
             St Francis Xavier's Church, Vellarkad
           </a>
           <p
-            class="font-tanker text-brand-yellow text-lg md:text-2xl uppercase tracking-widest underline decoration-2 underline-offset-8 mt-2"
+            class="font-tanker text-brand-yellow text-xl md:text-2xl uppercase tracking-widest underline decoration-2 underline-offset-8 mt-2"
           >
             AT 10:30AM
           </p>
           <p
-            class="font-tanker text-white text-base md:text-xl uppercase tracking-widest max-w-md mt-6 leading-relaxed"
+            class="font-tanker text-white text-xl md:text-xl uppercase tracking-widest max-w-md mt-6 leading-relaxed"
           >
             Please make sure to arrive on time to witness our special moment as
             we tie the knot ...and to join us for the celebration
@@ -444,7 +451,7 @@ import Layout from "../layouts/Layout.astro";
             class="font-tanker text-white text-base md:text-2xl uppercase tracking-widest max-w-md leading-relaxed"
           >
             THIS is also the most important part 😉<br />
-            Gather up at the wedding Ceremony will<br />
+            the wedding Ceremony will<br />
             be followed by Lunch at
           </p>
           <a
@@ -452,7 +459,7 @@ import Layout from "../layouts/Layout.astro";
             target="_blank"
             class="font-tanker text-brand-blue text-lg sm:text-xl md:text-4xl uppercase tracking-widest underline decoration-2 underline-offset-8 hover:text-sky-400 transition-colors mt-2"
           >
-            Gala @ Telcon , pannithadam
+            Gala by Telcon , pannithadam
           </a>
           <p
             class="font-tanker text-white text-base md:text-2xl uppercase tracking-widest max-w-md mt-6 leading-relaxed"
@@ -475,7 +482,7 @@ import Layout from "../layouts/Layout.astro";
           >0<sup>t<span class="font-molika">h</span></sup>!
         </h2>
         <p
-          class="font-tanker text-white text-lg md:text-4xl uppercase tracking-widest mt-4 md:mt-6"
+          class="font-tanker text-white text-xl md:text-4xl uppercase tracking-widest mt-4 md:mt-6"
         >
           SHerin & Austin
         </p>
