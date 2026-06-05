@@ -13,9 +13,12 @@ const {
 	image = "/og-image.jpg",
 } = Astro.props;
 
-// Compute absolute URL for OG image if it starts with /
-const ogImageUrl = new URL(image, Astro.url).toString();
-const canonicalUrl = new URL(Astro.url.pathname, Astro.url).toString();
+// Use your verified production site URL explicitly for metadata matching
+const productionOrigin = "https://austin-sherin.vercel.app";
+const ogImageUrl = image.startsWith("http")
+	? image
+	: `${productionOrigin}${image}`;
+const canonicalUrl = `${productionOrigin}${Astro.url.pathname}`;
 ---
 
 <!doctype html>
