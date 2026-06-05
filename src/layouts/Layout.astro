@@ -9,7 +9,7 @@ interface Props {
 
 const {
 	title = "Invite<3",
-	description = "You are cordially invited to celebrate our wedding!!!",
+	description = "You are cordially invited to the Marriage ceremony of: Austin and Sherin On Monday, 20th July 2026",
 	image = "/og-image.jpg",
 } = Astro.props;
 
@@ -23,6 +23,7 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.url).toString();
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<link href="https://cdn.prod.website-files.com" rel="preconnect" crossorigin="anonymous" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg?v=2" />
 		<link rel="icon" type="image/png" href="/favicon.png?v=2" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
